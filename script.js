@@ -41,3 +41,13 @@ async function fetchData() {
   } finally {
   }
 }
+
+// Button click event listener
+document.getElementById("fetchButton").addEventListener("click", fetchData);
+
+// Keypress event listener for Enter key
+document.getElementById("pokemonName").addEventListener("keypress", (event) => {
+  if (event.key === "Enter") {
+    fetchData();
+  }
+});

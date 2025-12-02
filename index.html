@@ -3,16 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <script src="./script.js" defer></script>
-    <title>Document</title>
+    <title>Pokemon Finder</title>
   </head>
   <body>
-    <input type="text" id="pokemonName" placeholder="Enter Pokemon name" />
-    <button onclick="fetchData()">Fetch Pokemon</button>
-    <img src="" alt="Pokemon Sprite" id="pokemonSprite" />
-    <p id="pokename"></p>
-    <p id="pokeheight"></p>
-    <p id="pokeweight"></p>
-    <p id="poketype"></p>
+    <div class="container">
+      <h1>Pokemon Finder</h1>
+      <div class="search-box">
+        <input type="text" id="pokemonName" placeholder="Enter Pokemon name" />
+        <button onclick="fetchData()">Search</button>
+      </div>
+      <div class="pokemon-card">
+        <img src="" alt="Pokemon Sprite" id="pokemonSprite" />
+        <div class="pokemon-info">
+          <p id="pokename"></p>
+          <p id="pokeheight"></p>
+          <p id="pokeweight"></p>
+          <p id="poketype"></p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

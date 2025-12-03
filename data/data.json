@@ -1,0 +1,74 @@
+{
+  "quotes": [
+    {
+      "symbol": "AAPL",
+      "value": 186.22,
+      "high": 188.5,
+      "low": 184.1,
+      "volume": 68432123
+    },
+    {
+      "symbol": "SPY",
+      "value": 525.44,
+      "high": 528.3,
+      "low": 522.2,
+      "volume": 58211987
+    }
+  ],
+  "btcSeries": [
+    { "label": "2024-11-01", "value": 93044.28 },
+    { "label": "2024-11-02", "value": 93110.15 },
+    { "label": "2024-11-03", "value": 92880.42 },
+    { "label": "2024-11-04", "value": 93250.63 },
+    { "label": "2024-11-05", "value": 93420.18 },
+    { "label": "2024-11-06", "value": 93610.77 },
+    { "label": "2024-11-07", "value": 93540.55 },
+    { "label": "2024-11-08", "value": 93700.24 },
+    { "label": "2024-11-09", "value": 93810.92 },
+    { "label": "2024-11-10", "value": 93944.82 },
+    { "label": "2024-11-11", "value": 93890.11 },
+    { "label": "2024-11-12", "value": 94022.5 }
+  ],
+  "news": [
+    {
+      "title": "Market opens steady",
+      "summary": "U.S. equities hold gains as investors digest a heavier earnings slate and watch rates drift lower into the close.",
+      "source": "news"
+    },
+    {
+      "title": "Tech leads rally",
+      "summary": "Mega-cap tech pushes indices higher with broad strength in semis and software offsetting weakness in energy names.",
+      "source": "news"
+    },
+    {
+      "title": "Rates in focus",
+      "summary": "Bond yields ease ahead of central bank remarks while futures price in a slower pace of hikes through year-end.",
+      "source": "news"
+    },
+    {
+      "title": "BTC inches up",
+      "summary": "Bitcoin trades higher alongside broader risk assets as volatility stays muted and volumes remain light.",
+      "source": "news"
+    },
+    {
+      "title": "Energy softens",
+      "summary": "Oil retreats on easing supply concerns and a stronger dollar, with traders eyeing upcoming inventory data.",
+      "source": "news"
+    },
+    {
+      "title": "Earnings surprise",
+      "summary": "Select industrials beat estimates on strong demand and improved margins, lifting guidance for the quarter.",
+      "source": "news"
+    },
+    {
+      "title": "Consumer sentiment",
+      "summary": "Latest survey shows steady confidence into year-end, with spending plans holding despite higher borrowing costs.",
+      "source": "news"
+    },
+    {
+      "title": "Global markets",
+      "summary": "European equities close mixed; Asia finishes higher as tech and autos outperform while exporters lag.",
+      "source": "news"
+    }
+  ]
+}

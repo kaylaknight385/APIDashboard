@@ -18,6 +18,9 @@
 
 ## <a name="features"></a> Features
 
+- [ ] Show loading text or spinner
+- [ ] Show an error message if API fails
+
 ## <a name="nextsteps"></a>Future Features
 
 ## <a name="deployment"></a>Deployed Link

@@ -12,14 +12,14 @@
     <header class="top-nav">
       <img src="/assets/images/logo-1.png" alt="Investor Insights Logo" class="logo">
       <nav class="nav-links" aria-label="Primary">
-        <button class="nav-link is-active" type="button">Home</button>
-        <button class="nav-link" type="button">Markets</button>
-        <button class="nav-link" type="button">News</button>
+        <button class="nav-link is-active" type="button" data-nav-target="top">Home</button>
+        <button class="nav-link" type="button" data-nav-target="markets">Markets</button>
+        <button class="nav-link" type="button" data-nav-target="news">News</button>
       </nav>
     </header>
 
-    <main class="page">
-      <section class="strip strip--stocks">
+    <main class="page" id="top">
+      <section class="strip strip--stocks" id="markets">
         <div class="stock-buttons" aria-label="Market status" data-role="market-list">
           <div class="stock-button" data-market="nyse">
             <div class="stock-button__name">NYSE</div>
@@ -49,22 +49,22 @@
         </div>
 
         <aside class="watchlist" aria-label="Watchlist" data-role="ticker-list">
-          <div class="watchlist__item" data-symbol="AAPL">
+          <button class="watchlist__item" type="button" data-symbol="AAPL">
             <span class="watchlist__label">Apple</span>
             <span class="watchlist__value" data-binding="ticker-AAPL">--</span>
-          </div>
-          <div class="watchlist__item" data-symbol="SPY">
+          </button>
+          <button class="watchlist__item" type="button" data-symbol="SPY">
             <span class="watchlist__label">S&amp;P 500</span>
             <span class="watchlist__value" data-binding="ticker-SPY">--</span>
-          </div>
-          <div class="watchlist__item" data-symbol="BTC">
+          </button>
+          <button class="watchlist__item" type="button" data-symbol="BTC">
             <span class="watchlist__label">Bitcoin</span>
             <span class="watchlist__value" data-binding="ticker-BTC">--</span>
-          </div>
+          </button>
         </aside>
       </section>
 
-      <section class="news-section" aria-label="Latest news">
+      <section class="news-section" aria-label="Latest news" id="news">
         <h2 class="section-title">Latest news</h2>
         <div class="news-search">
           <input

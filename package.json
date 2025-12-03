@@ -1,0 +1,24 @@
+{
+  "name": "apidashboard",
+  "version": "1.0.0",
+  "description": "- [Technologies Used](#technologiesused) - [Features](#features) - [Future Features](#nextsteps) - [Deployed App](#deployment) - [About the Author](#author)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaylaknight385/APIDashboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/kaylaknight385/APIDashboard/issues"
+  },
+  "homepage": "https://github.com/kaylaknight385/APIDashboard#readme",
+  "dependencies": {
+    "chart.js": "^4.4.4"
+  }
+}

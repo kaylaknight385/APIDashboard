@@ -1,6 +1,4 @@
-# Interactive Banking Landing Page
-
-![Bank](./assets/images/bank.png)
+# Investor Insights Dashboard
 
 ## Description
 
@@ -24,14 +22,14 @@
 
 ## <a name="deployment"></a>Deployed Link
 
-[Github Pages](LINK)
+[Github Pages](https://kaylaknight385.github.io/APIDashboard/)
 
 - You can view the repository here:
-  [Github](LINK)
+  [Github](https://github.com/kaylaknight385/APIDashboard.git)
 - If unable to view please go live locally through VS Code
 
 ## <a name="author"></a>About The Authors
 
-- **[Anwar Zeb](https://github.com/a-zeb)**
+- **[Anwar Zeb](https://github.com/a-zeb), [Kayla Knight](https://github.com/kaylaknight385)
 
 ## Works Cited:

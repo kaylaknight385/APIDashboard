@@ -1,3 +1,4 @@
+// updates the hero header with the current symbol, range, and status
 export function renderPrimary(state) {
   const symbolEl = document.querySelector('[data-binding="primary-symbol"]');
   const rangeEl = document.querySelector('[data-binding="primary-range"]');
@@ -7,6 +8,7 @@ export function renderPrimary(state) {
   if (statusEl) statusEl.textContent = state.primary.status;
 }
 
+// paints the watchlist items with current values and high/low labels
 export function renderTickers(tickers, formatCompact) {
   const listEl = document.querySelector('[data-role="ticker-list"]');
   if (!listEl) return;
@@ -25,6 +27,7 @@ export function renderTickers(tickers, formatCompact) {
   });
 }
 
+// renders up to eight news cards from the provided items
 export function renderNews(items) {
   const listEl = document.querySelector('[data-role="news-list"]');
   if (!listEl) return;
@@ -42,18 +45,21 @@ export function renderNews(items) {
   });
 }
 
+// shows a simple message in place of the news grid
 export function renderNewsMessage(text) {
   const listEl = document.querySelector('[data-role="news-list"]');
   if (!listEl) return;
   listEl.innerHTML = `<div class="news-card"><p class="news-card__summary">${text}</p></div>`;
 }
 
+// replaces ticker value placeholders with a status string
 export function setTickerStatus(text) {
   document.querySelectorAll(".watchlist__value").forEach((node) => {
     node.textContent = text;
   });
 }
 
+// highlights the active ticker in the watchlist
 export function markActiveStock(symbol) {
   document.querySelectorAll(".watchlist__item").forEach((item) => {
     item.classList.toggle("is-active", item.dataset.symbol === symbol);

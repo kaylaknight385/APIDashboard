@@ -1,8 +1,9 @@
 .news-section {
-  background: var(--surface);
+  background: #ffffff;
   padding: 16px;
-  border-radius: 8px;
-  border: 1px solid var(--border);
+  border-radius: 0;
+  border: 2px solid #000000;
+  box-shadow: 4px 4px 0px #000000;
 }
 
 .news-grid {
@@ -12,10 +13,11 @@
 }
 
 .news-card {
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 6px;
+  background: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 0;
   padding: 12px;
+  box-shadow: 2px 2px 0px #000000;
 }
 
 .news-card__kicker {

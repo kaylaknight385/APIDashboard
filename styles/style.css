@@ -1,9 +1,24 @@
+/*dont play with it. REAL FILE ORGANIZATION! Credit: ZEB.*/
+
 @import "./tokens.css";
 @import "./layout.css";
 @import "./components/nav.css";
 @import "./components/chart-card.css";
 @import "./components/ticker.css";
 @import "./components/news-card.css";
+
+/* style.css */
+
+@font-face {
+  font-family: 'ChicagoFLF';
+  src: url('../font/ChicagoFLF.ttf') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'ChicagoFLF', sans-serif;
+}
 
 .strip {
   padding: 12px 0;
@@ -16,45 +31,69 @@
 }
 
 .stock-button {
-  border: 1px solid var(--border);
-  background: #e6e6e6;
+  border: 2px solid #000000;
+  background: #ffffff;
   padding: 12px;
-  font-weight: 700;
+  font-weight: normal;
   text-transform: uppercase;
-  cursor: pointer;
-}
-
-.strip--stocks {
-  background: #e0e0e0;
-  border-bottom: 1px solid var(--border);
-}
-
-.crypto-section {
-  background: #e0e0e0;
-  padding: 16px;
-  border: 1px solid var(--border);
-}
-
-.crypto-grid {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path d="M0,0 L0,10 L3,7 L5,12 L7,11 L5,6 L9,6 Z" fill="black" stroke="white" stroke-width="0.5"/></svg>') 0 0, auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 10px;
-  margin-top: 8px;
+  gap: 4px;
+  box-shadow: 3px 3px 0px #000000;
 }
 
-.crypto-card {
-  background: #eaeaea;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 12px;
-  text-align: center;
-  font-weight: 600;
+.stock-button__name {
+  font-size: 14px;
+}
+
+.stock-button__time {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.stock-button__status {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.stock-button.is-active {
+  background: #000000;
+  color: #ffffff;
+}
+
+.news-search {
+  margin-bottom: 10px;
+}
+
+.news-search__input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 2px solid #000000;
+  border-radius: 0;
+  background: #ffffff;
+  font-family: 'ChicagoFLF', sans-serif;
 }
 
 .footer {
   text-align: center;
   padding: 16px;
-  background: #e6e6e6;
-  border-top: 1px solid var(--border);
-  font-weight: 600;
+  background: #ffffff;
+  border-top: 2px solid #000000;
+  font-weight: normal;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.logo, .nav-link{
+  opacity: 1;
+  transition: opacity .3s ease-in-out;
+}
+
+.nav-link:hover {
+  opacity: 0.5;
+}
+.logo:hover {
+  opacity: 0.5;
 }

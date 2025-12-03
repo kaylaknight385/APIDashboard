@@ -142,6 +142,19 @@ function bindInteractions() {
     });
   }
 
+  if (els.newsSearch) {
+    els.newsSearch.addEventListener("input", (e) => {
+      const term = e.target.value.toLowerCase();
+      const filtered = (state.news || []).filter(
+        (item) =>
+          item.title.toLowerCase().includes(term) ||
+          item.summary.toLowerCase().includes(term) ||
+          (item.source || "").toLowerCase().includes(term)
+      );
+      renderNews(filtered);
+    });
+  }
+
   els.navLinks.forEach((btn) => {
     btn.addEventListener("click", () => {
       const targetId = btn.dataset.navTarget;

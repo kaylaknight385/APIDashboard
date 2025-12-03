@@ -1,6 +1,8 @@
-# Investor Insights Dashboard
+# Investor Insights Dashboard 
 
 ## Description
+
+A real-time financial dashboard that provides investors with live market data, stock tracking, and financial news. Built with vanilla JavaScript and integrated with financial APIs to deliver up-to-date market insights. Features a clean, responsive interface with multiple theme options for optimal viewing in any environment.
 
 ## Table of Contents
 
@@ -8,33 +10,91 @@
 - [Features](#features)
 - [Future Features](#nextsteps)
 - [Deployed App](#deployment)
-- [About the Author](#author)
+- [About the Authors](#author)
 
 ## <a name="technologiesused"></a>Technologies Used
 
-- JavaScript
-- HTML5
-- CSS3
+- **JavaScript** - Dynamic functionality and API integration
+- **HTML5** - Semantic markup and structure
+- **CSS3** - Styling with CSS Grid, Flexbox, and custom properties
+- **Lightweight Charts** - Interactive stock chart visualization
+- **Financial APIs** - Real-time market data integration
 
 ## <a name="features"></a> Features
 
-- [ ] Show loading text or spinner
-- [ ] Show an error message if API fails
+**Real-time Stock Tracking** - Monitor multiple stocks with live price updates  
+**Interactive Charts** - Visualize stock performance with responsive charts  
+**Market Status Display** - View NYSE, LSE, and TSE market hours and status  
+**Financial News Feed** - Stay updated with latest market news  
+**News Search & Filter** - Find specific financial news articles  
+**Responsive Design** - Optimized for desktop, tablet, and mobile devices  
+**Multi-Stock Watchlist** - Track AAPL, SPY, BTC and other assets  
+**Clean UI/UX** - Intuitive interface for quick data access  
+
+**In Progress:**
+- [ ] Loading spinner for API requests
+- [ ] Error message handling for failed API calls
+- [ ] Theme switcher (Light/Dark/Retro modes)
 
 ## <a name="nextsteps"></a>Future Features
 
+- **User Authentication** - Save personalized watchlists and preferences
+- **Advanced Charting** - Multiple timeframes, technical indicators, and chart types
+- **Price Alerts** - Set notifications for target stock prices
+- **Portfolio Tracking** - Monitor your investment performance
+- **Market Analysis Tools** - Technical analysis and prediction features
+- **Cryptocurrency Integration** - Expanded crypto market coverage
+- **Mobile App** - Native iOS and Android applications
+- **AI-Powered Insights** - Machine learning stock predictions
+- **Email Notifications** - Daily market summaries and alerts
+
 ## <a name="deployment"></a>Deployed Link
 
+**Live Application:**  
 [Github Pages](https://kaylaknight385.github.io/APIDashboard/)
 
-- You can view the repository here:
-  [Github](https://github.com/kaylaknight385/APIDashboard.git)
-- If unable to view please go live locally through VS Code
+**Repository:**  
+[Github Repository](https://github.com/kaylaknight385/APIDashboard.git)
 
 ## <a name="author"></a>About The Authors
 
-- **[Anwar Zeb](https://github.com/a-zeb)**
-- **[Clarence Franklin](https://github.com/cfra8189)**
-- **[Kayla Knight](https://github.com/kaylaknight385)**
+**THEE TEAM**
+- **[Anwar Zeb](https://github.com/a-zeb)** - Backend Integration & API Development
+- **[Clarence Franklin](https://github.com/cfra8189)** - UI/UX Design & Styling
+- **[Kayla Knight](https://github.com/kaylaknight385)** - Project Lead & Frontend Development
+
+## Development Process
+
+This project was built collaboratively using:
+- Git branching workflow for version control
+- Feature-based development approach
+- Regular code reviews and pair programming
+- Agile methodology with daily standups
+
+## Installation & Setup
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/kaylaknight385/APIDashboard.git
+   ```
+
+2. Navigate to project directory:
+   ```bash
+   cd APIDashboard
+   ```
+
+3. Open with Live Server or your preferred local server
+
+4. View in browser at `localhost:5500` (or your port)
+
+
 
 ## Works Cited:
+
+- [Lightweight Charts Documentation](https://tradingview.github.io/lightweight-charts/)
+- [Financial Market APIs](https://www.alphavantage.co/)
+- [MDN Web Docs - JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [CSS-Tricks - Grid & Flexbox](https://css-tricks.com/)
+- Theme inspiration from classic financial terminals
+
+

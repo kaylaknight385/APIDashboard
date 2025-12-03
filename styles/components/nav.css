@@ -4,9 +4,9 @@
   justify-content: space-between;
   padding: 16px 40px;
   background: #ffffff;
-  color: var(--text);
-  border-bottom: 1px solid var(--border);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  color: #000000;
+  border-bottom: 2px solid #000000;
+  box-shadow: none;
 }
 
 .logo {
@@ -28,24 +28,26 @@
 }
 
 .nav-link {
-  background: transparent;
-  border: 1px solid var(--border);
-  color: var(--text);
-  padding: 10px 24px;
-  border-radius: 6px;
-  font-weight: 600;
+  background: #ffffff;
+  border: 2px solid #000000;
+  color: #000000;
+  padding: 8px 24px;
+  border-radius: 0;
+  font-weight: normal;
   cursor: pointer;
   min-width: 100px;
-  transition: all 0.2s ease;
+  transition: none;
+  font-family: 'ChicagoFLF', sans-serif;
+  box-shadow: 2px 2px 0px #000000;
 }
 
 .nav-link:hover {
-  background: #f8f8f8;
-  border-color: #333;
+  background: #cccccc;
 }
 
 .nav-link.is-active {
-  background: #f2f2f2;
+  background: #000000;
+  color: #ffffff;
 }
 
 @media (max-width: 860px) {

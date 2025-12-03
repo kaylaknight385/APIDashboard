@@ -15,11 +15,12 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background: var(--bg);
-  color: var(--text);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: #cccccc;
+  color: #000000;
+  font-family: 'ChicagoFLF', sans-serif;
   position: relative;
   padding-bottom: 60px;
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path d="M0,0 L0,10 L3,7 L5,12 L7,11 L5,6 L9,6 Z" fill="black" stroke="white" stroke-width="0.5"/></svg>') 0 0, auto;
 }
 
 .page {

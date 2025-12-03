@@ -1,6 +1,7 @@
 // spins up a lightweight-charts line chart and lets you set data later
 export function createChart(container) {
   if (!container || !window.LightweightCharts) return null;
+  // create a light themed chart with minimal grid styling
   const chart = window.LightweightCharts.createChart(container, {
     width: container.clientWidth,
     height: 220,

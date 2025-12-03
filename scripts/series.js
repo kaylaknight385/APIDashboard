@@ -18,6 +18,7 @@ function generateMockSeries(base, seedSymbol) {
   for (let i = 0; i < 40; i += 1) {
     const drift = (rand() - 0.5) * 0.6;
     price = Math.max(1, price + drift);
+    // increment a base epoch by one day per point so charts spread out
     const day = 1700000000 + i * 86400;
     points.push({ label: day, value: Number(price.toFixed(2)) });
   }

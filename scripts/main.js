@@ -10,6 +10,7 @@ import {
   markActiveStock,
 } from "./ui.js";
 
+// holds current dashboard data and defaults
 const state = {
   tickers: [],
   news: [],
@@ -34,8 +35,10 @@ const state = {
   ],
 };
 
+// keeps the chart instance so we only build it once
 let chartApi = null;
 
+// cache dom elements we reuse across handlers
 const els = {
   tickerList: document.querySelector('[data-role="ticker-list"]'),
   newsList: document.querySelector('[data-role="news-list"]'),
@@ -65,6 +68,7 @@ function setActiveSymbol(symbol) {
 async function loadTickers() {
   setTickerStatus("Loading...");
   try {
+    // pull base quotes from the bundled json file
     const data = await loadDataFile();
     state.tickers = data.quotes || [];
     state.chartData.equities = {};
@@ -78,9 +82,8 @@ async function loadTickers() {
           Number.isFinite(p.value)
       );
       state.chartData.btc = cleaned;
-      const values = cleaned
-        .map((p) => p.value)
-        .filter((v) => Number.isFinite(v));
+      // gather btc numeric values so we can compute summary stats
+      const values = cleaned.map((p) => p.value).filter((v) => Number.isFinite(v));
       state.tickers.push({
         symbol: "BTC",
         value: btcLive.value ?? values[values.length - 1] ?? null,
@@ -99,9 +102,8 @@ async function loadTickers() {
           Number.isFinite(p.value)
       );
       state.chartData.btc = cleaned;
-      const values = cleaned
-        .map((p) => p.value)
-        .filter((v) => Number.isFinite(v));
+      // gather btc numeric values so we can compute summary stats
+      const values = cleaned.map((p) => p.value).filter((v) => Number.isFinite(v));
       const last = cleaned[cleaned.length - 1];
       state.tickers.push({
         symbol: "BTC",
@@ -128,6 +130,7 @@ async function loadTickers() {
 async function loadNews() {
   renderNewsMessage("Loading news...");
   try {
+    // reuse the bundled json to get news items
     const data = await loadDataFile();
     state.news = data.news || [];
     renderNews(state.news);
@@ -140,6 +143,7 @@ async function loadNews() {
 // wires up click and input handlers for watchlist, news search, and nav
 function bindInteractions() {
   if (els.tickerList) {
+    // let users click a watchlist item to change the primary symbol
     els.tickerList.addEventListener("click", (e) => {
       const item = e.target.closest(".watchlist__item");
       if (!item) return;
@@ -150,6 +154,7 @@ function bindInteractions() {
   }
 
   if (els.newsSearch) {
+    // filter news client side as the user types
     els.newsSearch.addEventListener("input", (e) => {
       const term = e.target.value.toLowerCase();
       const filtered = (state.news || []).filter(
@@ -162,6 +167,7 @@ function bindInteractions() {
     });
   }
 
+  // smooth scroll nav buttons to their targets
   els.navLinks.forEach((btn) => {
     btn.addEventListener("click", () => {
       const targetId = btn.dataset.navTarget;
@@ -177,6 +183,7 @@ function bindInteractions() {
 function renderMarketTimes() {
   const now = new Date();
   state.markets.forEach((market) => {
+    // format the current time for the market timezone
     const timeString = now.toLocaleTimeString("en-US", {
       timeZone: market.tz,
       hour: "2-digit",

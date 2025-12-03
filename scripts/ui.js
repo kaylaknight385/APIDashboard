@@ -12,6 +12,7 @@ export function renderPrimary(state) {
 export function renderTickers(tickers, formatCompact) {
   const listEl = document.querySelector('[data-role="ticker-list"]');
   if (!listEl) return;
+  // clear any previous items before rendering new ones
   listEl.innerHTML = "";
   tickers.forEach((item) => {
     const row = document.createElement("button");
@@ -31,6 +32,7 @@ export function renderTickers(tickers, formatCompact) {
 export function renderNews(items) {
   const listEl = document.querySelector('[data-role="news-list"]');
   if (!listEl) return;
+  // replace the grid contents with the latest slice
   listEl.innerHTML = "";
   items.slice(0, 8).forEach((item) => {
     const sourceMarkup = item.source ? `<p class="news-card__source">${item.source}</p>` : "";

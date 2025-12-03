@@ -16,8 +16,20 @@ const state = {
   chartData: { btc: [], equities: {} },
   primary: { symbol: "AAPL", range: "1 day", status: "Live" },
   markets: [
-    { id: "nyse", name: "NYSE", tz: "America/New_York", open: "09:30", close: "16:00" },
-    { id: "lse", name: "LSE", tz: "Europe/London", open: "08:00", close: "16:30" },
+    {
+      id: "nyse",
+      name: "NYSE",
+      tz: "America/New_York",
+      open: "09:30",
+      close: "16:00",
+    },
+    {
+      id: "lse",
+      name: "LSE",
+      tz: "Europe/London",
+      open: "08:00",
+      close: "16:30",
+    },
     { id: "tse", name: "TSE", tz: "Asia/Tokyo", open: "09:00", close: "15:00" },
   ],
 };
@@ -57,22 +69,34 @@ async function loadTickers() {
     try {
       const btcLive = await loadBtcLive();
       const cleaned = (btcLive.series || []).filter(
-        (p) => Number.isFinite(new Date(p.label).getTime()) && Number.isFinite(p.value)
+        (p) =>
+          Number.isFinite(new Date(p.label).getTime()) &&
+          Number.isFinite(p.value)
       );
       state.chartData.btc = cleaned;
-      const values = cleaned.map((p) => p.value).filter((v) => Number.isFinite(v));
+      const values = cleaned
+        .map((p) => p.value)
+        .filter((v) => Number.isFinite(v));
       state.tickers.push({
         symbol: "BTC",
         value: btcLive.value ?? values[values.length - 1] ?? null,
-        high: Number.isFinite(btcLive.high) ? btcLive.high : Math.max(...values, 0),
-        low: Number.isFinite(btcLive.low) ? btcLive.low : Math.min(...values, 0),
+        high: Number.isFinite(btcLive.high)
+          ? btcLive.high
+          : Math.max(...values, 0),
+        low: Number.isFinite(btcLive.low)
+          ? btcLive.low
+          : Math.min(...values, 0),
       });
     } catch {
       const cleaned = (data.btcSeries || []).filter(
-        (p) => Number.isFinite(new Date(p.label).getTime()) && Number.isFinite(p.value)
+        (p) =>
+          Number.isFinite(new Date(p.label).getTime()) &&
+          Number.isFinite(p.value)
       );
       state.chartData.btc = cleaned;
-      const values = cleaned.map((p) => p.value).filter((v) => Number.isFinite(v));
+      const values = cleaned
+        .map((p) => p.value)
+        .filter((v) => Number.isFinite(v));
       const last = cleaned[cleaned.length - 1];
       state.tickers.push({
         symbol: "BTC",
@@ -139,8 +163,12 @@ function renderMarketTimes() {
       hour12: false,
     });
     const isOpen = marketIsOpen(now, market);
-    const timeEl = document.querySelector(`[data-binding="market-time-${market.id}"]`);
-    const statusEl = document.querySelector(`[data-binding="market-status-${market.id}"]`);
+    const timeEl = document.querySelector(
+      `[data-binding="market-time-${market.id}"]`
+    );
+    const statusEl = document.querySelector(
+      `[data-binding="market-status-${market.id}"]`
+    );
     if (timeEl) timeEl.textContent = timeString;
     if (statusEl) statusEl.textContent = isOpen ? "Open" : "Closed";
   });
@@ -153,7 +181,10 @@ function marketIsOpen(now, market) {
     hour: "2-digit",
     minute: "2-digit",
   });
-  const [currentHour, currentMinute] = formatter.format(now).split(":").map(Number);
+  const [currentHour, currentMinute] = formatter
+    .format(now)
+    .split(":")
+    .map(Number);
   const [openHour, openMinute] = market.open.split(":").map(Number);
   const [closeHour, closeMinute] = market.close.split(":").map(Number);
   const current = currentHour * 60 + currentMinute;

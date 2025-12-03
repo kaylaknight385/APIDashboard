@@ -33,42 +33,42 @@
     {
       "title": "Market opens steady",
       "summary": "U.S. equities hold gains as investors digest a heavier earnings slate and watch rates drift lower into the close.",
-      "source": "news"
+      "source": "WSJ"
     },
     {
       "title": "Tech leads rally",
       "summary": "Mega-cap tech pushes indices higher with broad strength in semis and software offsetting weakness in energy names.",
-      "source": "news"
+      "source": "TechCrunch"
     },
     {
       "title": "Rates in focus",
       "summary": "Bond yields ease ahead of central bank remarks while futures price in a slower pace of hikes through year-end.",
-      "source": "news"
+      "source": "Reuters"
     },
     {
       "title": "BTC inches up",
       "summary": "Bitcoin trades higher alongside broader risk assets as volatility stays muted and volumes remain light.",
-      "source": "news"
+      "source": "CoinDesk"
     },
     {
       "title": "Energy softens",
       "summary": "Oil retreats on easing supply concerns and a stronger dollar, with traders eyeing upcoming inventory data.",
-      "source": "news"
+      "source": "Bloomberg"
     },
     {
       "title": "Earnings surprise",
       "summary": "Select industrials beat estimates on strong demand and improved margins, lifting guidance for the quarter.",
-      "source": "news"
+      "source": "CNBC"
     },
     {
       "title": "Consumer sentiment",
       "summary": "Latest survey shows steady confidence into year-end, with spending plans holding despite higher borrowing costs.",
-      "source": "news"
+      "source": "MarketWatch"
     },
     {
       "title": "Global markets",
       "summary": "European equities close mixed; Asia finishes higher as tech and autos outperform while exporters lag.",
-      "source": "news"
+      "source": "Financial Times"
     }
   ]
 }

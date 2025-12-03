@@ -32,6 +32,6 @@
 
 - **[Anwar Zeb](https://github.com/a-zeb)**
 - **[Clarence Franklin](https://github.com/cfra8189)**
-- **[Kayla Knight](https://github.com/kaylaknight385)]**
+- **[Kayla Knight](https://github.com/kaylaknight385)**
 
 ## Works Cited:

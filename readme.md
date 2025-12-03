@@ -30,6 +30,8 @@
 
 ## <a name="author"></a>About The Authors
 
-- **[Anwar Zeb](https://github.com/a-zeb), [Kayla Knight](https://github.com/kaylaknight385)
+- **[Anwar Zeb](https://github.com/a-zeb)**
+- **[Clarence Franklin](https://github.com/cfra8189)**
+- **[Kayla Knight](https://github.com/kaylaknight385)]**
 
 ## Works Cited:

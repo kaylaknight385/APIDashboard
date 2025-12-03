@@ -21,7 +21,27 @@
   padding: 12px;
   font-weight: 700;
   text-transform: uppercase;
-  cursor: pointer;
+  cursor: default;
+  display: grid;
+  gap: 4px;
+}
+
+.stock-button__name {
+  font-size: 14px;
+}
+
+.stock-button__time {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.stock-button__status {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.stock-button.is-active {
+  border-color: var(--text);
 }
 
 .strip--stocks {
@@ -29,26 +49,15 @@
   border-bottom: 1px solid var(--border);
 }
 
-.crypto-section {
-  background: #e0e0e0;
-  padding: 16px;
-  border: 1px solid var(--border);
+.news-search {
+  margin-bottom: 10px;
 }
 
-.crypto-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 10px;
-  margin-top: 8px;
-}
-
-.crypto-card {
-  background: #eaeaea;
+.news-search__input {
+  width: 100%;
+  padding: 8px 10px;
   border: 1px solid var(--border);
   border-radius: 6px;
-  padding: 12px;
-  text-align: center;
-  font-weight: 600;
 }
 
 .footer {

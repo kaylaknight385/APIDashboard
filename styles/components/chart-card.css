@@ -32,13 +32,10 @@
 .chart-card__canvas {
   background: #f6f6f6;
   border-radius: 6px;
-  height: 200px;
-  display: grid;
-  place-items: center;
+  height: 220px;
+  width: 100%;
+  display: block;
   border: 1px dashed var(--border);
-}
-
-.chart-card__placeholder {
-  font-size: 14px;
-  color: var(--muted);
+  position: relative;
+  overflow: hidden;
 }

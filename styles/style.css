@@ -1,11 +1,7 @@
 /*dont play with it. REAL FILE ORGANIZATION! Credit: ZEB.*/
 
-@import "./tokens.css";
-@import "./layout.css";
-@import "./components/nav.css";
-@import "./components/chart-card.css";
-@import "./components/ticker.css";
-@import "./components/news-card.css";
+@import "tokens.css";
+@import "layout.css";
 
 /* style.css */
 

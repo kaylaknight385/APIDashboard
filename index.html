@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/style.css" />
+    <script src="https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js"></script>
     <script type="module" src="./scripts/main.js"></script>
     <title>Investor Insights Dashboard</title>
   </head>
@@ -12,17 +13,29 @@
       <img src="/assets/images/logo-1.png" alt="Investor Insights Logo" class="logo">
       <nav class="nav-links" aria-label="Primary">
         <button class="nav-link is-active" type="button">Home</button>
+        <button class="nav-link" type="button">Markets</button>
         <button class="nav-link" type="button">News</button>
-        <button class="nav-link" type="button">Crypto</button>
       </nav>
     </header>
 
     <main class="page">
       <section class="strip strip--stocks">
-        <div class="stock-buttons" aria-label="Stock buttons">
-          <button class="stock-button" data-symbol="AAPL">Stock</button>
-          <button class="stock-button" data-symbol="SPY">Stock</button>
-          <button class="stock-button" data-symbol="BTC">Stock</button>
+        <div class="stock-buttons" aria-label="Market status" data-role="market-list">
+          <div class="stock-button" data-market="nyse">
+            <div class="stock-button__name">NYSE</div>
+            <div class="stock-button__time" data-binding="market-time-nyse">--:--</div>
+            <div class="stock-button__status" data-binding="market-status-nyse">Closed</div>
+          </div>
+          <div class="stock-button" data-market="lse">
+            <div class="stock-button__name">LSE</div>
+            <div class="stock-button__time" data-binding="market-time-lse">--:--</div>
+            <div class="stock-button__status" data-binding="market-status-lse">Closed</div>
+          </div>
+          <div class="stock-button" data-market="tse">
+            <div class="stock-button__name">TSE</div>
+            <div class="stock-button__time" data-binding="market-time-tse">--:--</div>
+            <div class="stock-button__status" data-binding="market-status-tse">Closed</div>
+          </div>
         </div>
       </section>
 
@@ -32,9 +45,7 @@
             <span class="chart-card__symbol" data-binding="primary-symbol">AAPL</span>
             <span class="chart-card__range" data-binding="primary-range">1 day</span>
           </div>
-          <div class="chart-card__canvas" aria-label="Price chart" data-binding="chart-placeholder">
-            <span class="chart-card__placeholder">display</span>
-          </div>
+          <div class="chart-card__canvas" aria-label="Price chart" data-binding="chart-placeholder"></div>
         </div>
 
         <aside class="watchlist" aria-label="Watchlist" data-role="ticker-list">
@@ -50,38 +61,40 @@
             <span class="watchlist__label">Bitcoin</span>
             <span class="watchlist__value" data-binding="ticker-BTC">--</span>
           </div>
-          <button class="watchlist__add" type="button">+</button>
         </aside>
       </section>
 
       <section class="news-section" aria-label="Latest news">
         <h2 class="section-title">Latest news</h2>
+        <div class="news-search">
+          <input
+            type="search"
+            class="news-search__input"
+            placeholder="Filter news..."
+            data-role="news-search"
+            aria-label="Filter news"
+          />
+        </div>
         <div class="news-grid" data-role="news-list">
           <article class="news-card" data-symbol="AAPL">
             <h3 class="news-card__title">Article</h3>
             <p class="news-card__summary">placeholder summary</p>
+            <p class="news-card__source">Source</p>
           </article>
           <article class="news-card" data-symbol="SPY">
             <h3 class="news-card__title">Article</h3>
             <p class="news-card__summary">placeholder summary</p>
+            <p class="news-card__source">Source</p>
           </article>
           <article class="news-card" data-symbol="BTC">
             <h3 class="news-card__title">Article</h3>
             <p class="news-card__summary">placeholder summary</p>
+            <p class="news-card__source">Source</p>
           </article>
-        </div>
-      </section>
-
-      <section class="crypto-section" aria-label="Crypto">
-        <h2 class="section-title">Crypto</h2>
-        <div class="crypto-grid" data-role="crypto-list">
-          <div class="crypto-card">placeholder</div>
-          <div class="crypto-card">placeholder</div>
-          <div class="crypto-card">placeholder</div>
         </div>
       </section>
     </main>
 
-    <footer class="footer">Footer</footer>
+    <footer class="footer">Investor Insights Dashboard © 2025</footer>
   </body>
 </html>

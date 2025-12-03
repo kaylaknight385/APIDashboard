@@ -1,9 +1,10 @@
 .chart-card {
-  background: var(--surface);
-  color: var(--text);
-  border-radius: 8px;
+  background: #ffffff;
+  color: #000000;
+  border-radius: 0;
   padding: 16px;
-  border: 1px solid var(--border);
+  border: 2px solid #000000;
+  box-shadow: 4px 4px 0px #000000;
 }
 
 .chart-card__header {
@@ -30,15 +31,12 @@
 }
 
 .chart-card__canvas {
-  background: #f6f6f6;
-  border-radius: 6px;
-  height: 200px;
-  display: grid;
-  place-items: center;
-  border: 1px dashed var(--border);
-}
-
-.chart-card__placeholder {
-  font-size: 14px;
-  color: var(--muted);
+  background: #ffffff;
+  border-radius: 0;
+  height: 220px;
+  width: 100%;
+  display: block;
+  border: 2px solid #000000;
+  position: relative;
+  overflow: hidden;
 }

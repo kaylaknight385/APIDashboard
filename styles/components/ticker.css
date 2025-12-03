@@ -3,11 +3,11 @@
 }
 
 .ticker {
-  background: var(--surface);
-  color: var(--text);
-  border-radius: 6px;
+  background: #ffffff;
+  color: #000000;
+  border-radius: 0;
   padding: 12px 14px;
-  border: 1px solid var(--border);
+  border: 2px solid #000000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,10 +24,11 @@
 .watchlist {
   display: grid;
   gap: 8px;
-  background: var(--surface);
+  background: #ffffff;
   padding: 12px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
+  border: 2px solid #000000;
+  border-radius: 0;
+  box-shadow: 4px 4px 0px #000000;
 }
 
 .watchlist__item {
@@ -35,9 +36,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 12px;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  background: #f7f7f7;
+  border: 2px solid #000000;
+  border-radius: 0;
+  background: #ffffff;
 }
 
 .watchlist__label {
@@ -49,9 +50,10 @@
 }
 
 .watchlist__add {
-  border: 1px solid var(--border);
-  background: #f7f7f7;
-  border-radius: 6px;
+  border: 2px solid #000000;
+  background: #ffffff;
+  border-radius: 0;
   padding: 10px;
   cursor: pointer;
+  box-shadow: 2px 2px 0px #000000;
 }

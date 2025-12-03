@@ -1,0 +1,60 @@
+@import "./tokens.css";
+@import "./layout.css";
+@import "./components/nav.css";
+@import "./components/chart-card.css";
+@import "./components/ticker.css";
+@import "./components/news-card.css";
+
+.strip {
+  padding: 12px 0;
+}
+
+.stock-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+}
+
+.stock-button {
+  border: 1px solid var(--border);
+  background: #e6e6e6;
+  padding: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.strip--stocks {
+  background: #e0e0e0;
+  border-bottom: 1px solid var(--border);
+}
+
+.crypto-section {
+  background: #e0e0e0;
+  padding: 16px;
+  border: 1px solid var(--border);
+}
+
+.crypto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.crypto-card {
+  background: #eaeaea;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 12px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.footer {
+  text-align: center;
+  padding: 16px;
+  background: #e6e6e6;
+  border-top: 1px solid var(--border);
+  font-weight: 600;
+}

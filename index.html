@@ -3,26 +3,85 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="./script.js" defer></script>
-    <title>Pokemon Finder</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <script type="module" src="./scripts/main.js"></script>
+    <title>Investor Insights Dashboard</title>
   </head>
   <body>
-    <div class="container">
-      <h1>Pokemon Finder</h1>
-      <div class="search-box">
-        <input type="text" id="pokemonName" placeholder="Enter Pokemon name" />
-        <button id="fetchButton" onclick="fetchData()">Search</button>
-      </div>
-      <div class="pokemon-card">
-        <img src="" alt="Pokemon Sprite" id="pokemonSprite" />
-        <div class="pokemon-info">
-          <p id="pokename"></p>
-          <p id="pokeheight"></p>
-          <p id="pokeweight"></p>
-          <p id="poketype"></p>
+    <header class="top-nav">
+      <div class="brand">[w]</div>
+      <nav class="nav-links" aria-label="Primary">
+        <button class="nav-link is-active" type="button">Home</button>
+        <button class="nav-link" type="button">News</button>
+        <button class="nav-link" type="button">Crypto</button>
+      </nav>
+    </header>
+
+    <main class="page">
+      <section class="strip strip--stocks">
+        <div class="stock-buttons" aria-label="Stock buttons">
+          <button class="stock-button" data-symbol="AAPL">Stock</button>
+          <button class="stock-button" data-symbol="SPY">Stock</button>
+          <button class="stock-button" data-symbol="BTC">Stock</button>
         </div>
-      </div>
-    </div>
+      </section>
+
+      <section class="hero">
+        <div class="chart-card" data-role="primary-chart">
+          <div class="chart-card__header">
+            <span class="chart-card__symbol" data-binding="primary-symbol">AAPL</span>
+            <span class="chart-card__range" data-binding="primary-range">1 day</span>
+          </div>
+          <div class="chart-card__canvas" aria-label="Price chart" data-binding="chart-placeholder">
+            <span class="chart-card__placeholder">display</span>
+          </div>
+        </div>
+
+        <aside class="watchlist" aria-label="Watchlist" data-role="ticker-list">
+          <div class="watchlist__item" data-symbol="AAPL">
+            <span class="watchlist__label">Apple</span>
+            <span class="watchlist__value" data-binding="ticker-AAPL">--</span>
+          </div>
+          <div class="watchlist__item" data-symbol="SPY">
+            <span class="watchlist__label">S&amp;P 500</span>
+            <span class="watchlist__value" data-binding="ticker-SPY">--</span>
+          </div>
+          <div class="watchlist__item" data-symbol="BTC">
+            <span class="watchlist__label">Bitcoin</span>
+            <span class="watchlist__value" data-binding="ticker-BTC">--</span>
+          </div>
+          <button class="watchlist__add" type="button">+</button>
+        </aside>
+      </section>
+
+      <section class="news-section" aria-label="Latest news">
+        <h2 class="section-title">Latest news</h2>
+        <div class="news-grid" data-role="news-list">
+          <article class="news-card" data-symbol="AAPL">
+            <h3 class="news-card__title">Article</h3>
+            <p class="news-card__summary">placeholder summary</p>
+          </article>
+          <article class="news-card" data-symbol="SPY">
+            <h3 class="news-card__title">Article</h3>
+            <p class="news-card__summary">placeholder summary</p>
+          </article>
+          <article class="news-card" data-symbol="BTC">
+            <h3 class="news-card__title">Article</h3>
+            <p class="news-card__summary">placeholder summary</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="crypto-section" aria-label="Crypto">
+        <h2 class="section-title">Crypto</h2>
+        <div class="crypto-grid" data-role="crypto-list">
+          <div class="crypto-card">placeholder</div>
+          <div class="crypto-card">placeholder</div>
+          <div class="crypto-card">placeholder</div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">Footer</footer>
   </body>
 </html>

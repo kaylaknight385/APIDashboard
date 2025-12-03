@@ -1,0 +1,8 @@
+:root {
+  --bg: #f9f9f9;
+  --surface: #ffffff;
+  --text: #111111;
+  --muted: #555555;
+  --border: #cccccc;
+  --font: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+}

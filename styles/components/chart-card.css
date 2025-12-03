@@ -1,0 +1,44 @@
+.chart-card {
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 16px;
+  border: 1px solid var(--border);
+}
+
+.chart-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.chart-card__id {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chart-card__symbol {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.chart-card__range {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.chart-card__canvas {
+  background: #f6f6f6;
+  border-radius: 6px;
+  height: 200px;
+  display: grid;
+  place-items: center;
+  border: 1px dashed var(--border);
+}
+
+.chart-card__placeholder {
+  font-size: 14px;
+  color: var(--muted);
+}

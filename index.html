@@ -3,98 +3,165 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="styles/style.css" />
     <script src="https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js"></script>
     <script type="module" src="./scripts/main.js" defer></script>
     <title>Investor Insights Dashboard</title>
   </head>
-  <body>
-    <header class="top-nav">
-      <img src="./assets/images/logo-1.png" alt="Investor Insights Logo" class="logo">
-      <h1 class="title">Investor Insights Dashboard</h1>
-      <nav class="nav-links" aria-label="Primary">
-        <button class="nav-link is-active" type="button" data-nav-target="top">Home</button>
-        <button class="nav-link" type="button" data-nav-target="markets">Markets</button>
-        <button class="nav-link" type="button" data-nav-target="news">News</button>
-      </nav>
-    </header>
-
-    <main class="page" id="top">
-      <section class="strip strip--stocks" id="markets">
-        <div class="stock-buttons" aria-label="Market status" data-role="market-list">
-          <div class="stock-button" data-market="nyse">
-            <div class="stock-button__name">NYSE</div>
-            <div class="stock-button__time" data-binding="market-time-nyse">--:--</div>
-            <div class="stock-button__status" data-binding="market-status-nyse">Closed</div>
-          </div>
-          <div class="stock-button" data-market="lse">
-            <div class="stock-button__name">LSE</div>
-            <div class="stock-button__time" data-binding="market-time-lse">--:--</div>
-            <div class="stock-button__status" data-binding="market-status-lse">Closed</div>
-          </div>
-          <div class="stock-button" data-market="tse">
-            <div class="stock-button__name">TSE</div>
-            <div class="stock-button__time" data-binding="market-time-tse">--:--</div>
-            <div class="stock-button__status" data-binding="market-status-tse">Closed</div>
-          </div>
-        </div>
-      </section>
-
-      <section class="hero">
-        <div class="chart-card" data-role="primary-chart">
-          <div class="chart-card__header">
-            <span class="chart-card__symbol" data-binding="primary-symbol">AAPL</span>
-            <span class="chart-card__range" data-binding="primary-range">1 day</span>
-          </div>
-          <div class="chart-card__canvas" aria-label="Price chart" data-binding="chart-placeholder"></div>
-        </div>
-
-        <aside class="watchlist" aria-label="Watchlist" data-role="ticker-list">
-          <button class="watchlist__item" type="button" data-symbol="AAPL">
-            <span class="watchlist__label">Apple</span>
-            <span class="watchlist__value" data-binding="ticker-AAPL">--</span>
-          </button>
-          <button class="watchlist__item" type="button" data-symbol="SPY">
-            <span class="watchlist__label">S&amp;P 500</span>
-            <span class="watchlist__value" data-binding="ticker-SPY">--</span>
-          </button>
-          <button class="watchlist__item" type="button" data-symbol="BTC">
-            <span class="watchlist__label">Bitcoin</span>
-            <span class="watchlist__value" data-binding="ticker-BTC">--</span>
-          </button>
-        </aside>
-      </section>
-
-      <section class="news-section" aria-label="Latest news" id="news">
-        <h2 class="section-title">Latest news</h2>
-        <div class="news-search">
-          <input
-            type="search"
-            class="news-search__input"
-            placeholder="Filter news..."
-            data-role="news-search"
-            aria-label="Filter news"
+  <body class="container">
+    <div class="row">
+      <div class="column">
+        <header class="top-nav">
+          <img
+            src="./assets/images/logo-1.png"
+            alt="Investor Insights Logo"
+            class="logo"
           />
-        </div>
-        <div class="news-grid" data-role="news-list">
-          <article class="news-card" data-symbol="AAPL">
-            <h3 class="news-card__title">Article</h3>
-            <p class="news-card__summary">placeholder summary</p>
-            <p class="news-card__source">Source</p>
-          </article>
-          <article class="news-card" data-symbol="SPY">
-            <h3 class="news-card__title">Article</h3>
-            <p class="news-card__summary">placeholder summary</p>
-            <p class="news-card__source">Source</p>
-          </article>
-          <article class="news-card" data-symbol="BTC">
-            <h3 class="news-card__title">Article</h3>
-            <p class="news-card__summary">placeholder summary</p>
-            <p class="news-card__source">Source</p>
-          </article>
-        </div>
-      </section>
-    </main>
+          <h1 class="title">Investor Insights Dashboard</h1>
+          <nav class="nav-links" aria-label="Primary">
+            <button
+              class="nav-link is-active"
+              type="button"
+              data-nav-target="top"
+            >
+              Home
+            </button>
+            <button class="nav-link" type="button" data-nav-target="markets">
+              Markets
+            </button>
+            <button class="nav-link" type="button" data-nav-target="news">
+              News
+            </button>
+          </nav>
+        </header>
+
+        <main class="page" id="top">
+          <section class="strip strip--stocks" id="markets">
+            <div
+              class="stock-buttons"
+              aria-label="Market status"
+              data-role="market-list"
+            >
+              <div class="stock-button" data-market="nyse">
+                <div class="stock-button__name">NYSE</div>
+                <div class="stock-button__time" data-binding="market-time-nyse">
+                  --:--
+                </div>
+                <div
+                  class="stock-button__status"
+                  data-binding="market-status-nyse"
+                >
+                  Closed
+                </div>
+              </div>
+              <div class="stock-button" data-market="lse">
+                <div class="stock-button__name">LSE</div>
+                <div class="stock-button__time" data-binding="market-time-lse">
+                  --:--
+                </div>
+                <div
+                  class="stock-button__status"
+                  data-binding="market-status-lse"
+                >
+                  Closed
+                </div>
+              </div>
+              <div class="stock-button" data-market="tse">
+                <div class="stock-button__name">TSE</div>
+                <div class="stock-button__time" data-binding="market-time-tse">
+                  --:--
+                </div>
+                <div
+                  class="stock-button__status"
+                  data-binding="market-status-tse"
+                >
+                  Closed
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="hero">
+            <div class="chart-card" data-role="primary-chart">
+              <div class="chart-card__header">
+                <span class="chart-card__symbol" data-binding="primary-symbol"
+                  >AAPL</span
+                >
+                <span class="chart-card__range" data-binding="primary-range"
+                  >1 day</span
+                >
+              </div>
+              <div
+                class="chart-card__canvas"
+                aria-label="Price chart"
+                data-binding="chart-placeholder"
+              ></div>
+            </div>
+
+            <aside
+              class="watchlist"
+              aria-label="Watchlist"
+              data-role="ticker-list"
+            >
+              <button class="watchlist__item" type="button" data-symbol="AAPL">
+                <span class="watchlist__label">Apple</span>
+                <span class="watchlist__value" data-binding="ticker-AAPL"
+                  >--</span
+                >
+              </button>
+              <button class="watchlist__item" type="button" data-symbol="SPY">
+                <span class="watchlist__label">S&amp;P 500</span>
+                <span class="watchlist__value" data-binding="ticker-SPY"
+                  >--</span
+                >
+              </button>
+              <button class="watchlist__item" type="button" data-symbol="BTC">
+                <span class="watchlist__label">Bitcoin</span>
+                <span class="watchlist__value" data-binding="ticker-BTC"
+                  >--</span
+                >
+              </button>
+            </aside>
+          </section>
+
+          <section class="news-section" aria-label="Latest news" id="news">
+            <h2 class="section-title">Latest news</h2>
+            <div class="news-search">
+              <input
+                type="search"
+                class="news-search__input"
+                placeholder="Filter news..."
+                data-role="news-search"
+                aria-label="Filter news"
+              />
+            </div>
+            <div class="news-grid" data-role="news-list">
+              <article class="news-card" data-symbol="AAPL">
+                <h3 class="news-card__title">Article</h3>
+                <p class="news-card__summary">placeholder summary</p>
+                <p class="news-card__source">Source</p>
+              </article>
+              <article class="news-card" data-symbol="SPY">
+                <h3 class="news-card__title">Article</h3>
+                <p class="news-card__summary">placeholder summary</p>
+                <p class="news-card__source">Source</p>
+              </article>
+              <article class="news-card" data-symbol="BTC">
+                <h3 class="news-card__title">Article</h3>
+                <p class="news-card__summary">placeholder summary</p>
+                <p class="news-card__source">Source</p>
+              </article>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
 
     <footer class="footer">Investor Insights Dashboard © 2025</footer>
   </body>

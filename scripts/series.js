@@ -1,3 +1,4 @@
+// returns a seeded random number helper so mock data stays the same
 function seededRandom(seed) {
   let t = seed;
   return () => {
@@ -9,6 +10,7 @@ function seededRandom(seed) {
   };
 }
 
+// builds a mock price path from a starting value and seed
 function generateMockSeries(base, seedSymbol) {
   const rand = seededRandom(seedSymbol.split("").reduce((acc, ch) => acc + ch.charCodeAt(0), 0));
   const points = [];
@@ -22,6 +24,7 @@ function generateMockSeries(base, seedSymbol) {
   return points;
 }
 
+// turns raw label/value pairs into chart ready data
 function normalizeSeries(series = []) {
   return series
     .map((p) => {
@@ -32,6 +35,7 @@ function normalizeSeries(series = []) {
     .filter((p) => Number.isFinite(p.time) && Number.isFinite(p.value));
 }
 
+// assembles chart data for btc or stocks with mock fallbacks when needed
 export function buildSeriesForSymbol(symbol, state) {
   if (symbol === "BTC") {
     const btcSeries = normalizeSeries(state.chartData.btc);

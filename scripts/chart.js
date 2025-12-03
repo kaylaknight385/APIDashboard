@@ -1,3 +1,4 @@
+// spins up a lightweight-charts line chart and lets you set data later
 export function createChart(container) {
   if (!container || !window.LightweightCharts) return null;
   const chart = window.LightweightCharts.createChart(container, {
@@ -15,6 +16,7 @@ export function createChart(container) {
   const series = chart.addLineSeries({ color: "#111", lineWidth: 2 });
 
   return {
+    // updates the chart data and fits the visible range
     setData(data) {
       if (!Array.isArray(data) || !data.length) return;
       series.setData(data);

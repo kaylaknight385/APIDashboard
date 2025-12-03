@@ -44,6 +44,7 @@ const els = {
   navLinks: document.querySelectorAll("[data-nav-target]"),
 };
 
+// draws or updates the chart with series data for a symbol
 function renderChart(symbol) {
   if (!els.chartArea) return;
   const seriesData = buildSeriesForSymbol(symbol, state);
@@ -52,6 +53,7 @@ function renderChart(symbol) {
   chartApi?.setData(seriesData);
 }
 
+// switches the primary symbol and refreshes the ui to match
 function setActiveSymbol(symbol) {
   state.primary.symbol = symbol;
   renderPrimary(state);
@@ -59,6 +61,7 @@ function setActiveSymbol(symbol) {
   renderChart(symbol);
 }
 
+// fetches tickers (plus btc) then fills the watchlist and chart
 async function loadTickers() {
   setTickerStatus("Loading...");
   try {
@@ -68,6 +71,7 @@ async function loadTickers() {
 
     try {
       const btcLive = await loadBtcLive();
+      // keep only btc points that have a valid date and numeric value
       const cleaned = (btcLive.series || []).filter(
         (p) =>
           Number.isFinite(new Date(p.label).getTime()) &&
@@ -88,6 +92,7 @@ async function loadTickers() {
           : Math.min(...values, 0),
       });
     } catch {
+      // keep only fallback btc points that have a valid date and numeric value
       const cleaned = (data.btcSeries || []).filter(
         (p) =>
           Number.isFinite(new Date(p.label).getTime()) &&
@@ -119,6 +124,7 @@ async function loadTickers() {
   }
 }
 
+// pulls news items from data file and renders the feed
 async function loadNews() {
   renderNewsMessage("Loading news...");
   try {
@@ -131,6 +137,7 @@ async function loadNews() {
   }
 }
 
+// wires up click and input handlers for watchlist, news search, and nav
 function bindInteractions() {
   if (els.tickerList) {
     els.tickerList.addEventListener("click", (e) => {
@@ -166,6 +173,7 @@ function bindInteractions() {
   });
 }
 
+// updates each market chip with its current time and open/closed state
 function renderMarketTimes() {
   const now = new Date();
   state.markets.forEach((market) => {
@@ -187,6 +195,7 @@ function renderMarketTimes() {
   });
 }
 
+// checks if a market is open based on its timezone and hours
 function marketIsOpen(now, market) {
   const formatter = new Intl.DateTimeFormat("en-GB", {
     timeZone: market.tz,
@@ -198,6 +207,7 @@ function marketIsOpen(now, market) {
     .format(now)
     .split(":")
     .map(Number);
+  // convert current time and open/close strings into minutes for easy compare
   const [openHour, openMinute] = market.open.split(":").map(Number);
   const [closeHour, closeMinute] = market.close.split(":").map(Number);
   const current = currentHour * 60 + currentMinute;
@@ -206,6 +216,7 @@ function marketIsOpen(now, market) {
   return current >= open && current <= close;
 }
 
+// boots the dashboard, loads data, and starts the market timer
 async function init() {
   renderPrimary(state);
   bindInteractions();

@@ -1,4 +1,4 @@
-# Investor Insights Dashboard 
+# Investor Insights Dashboard
 
 ## Description
 
@@ -29,11 +29,10 @@ A real-time financial dashboard that provides investors with live market data, s
 **News Search & Filter** - Find specific financial news articles  
 **Responsive Design** - Optimized for desktop, tablet, and mobile devices  
 **Multi-Stock Watchlist** - Track AAPL, SPY, BTC and other assets  
-**Clean UI/UX** - Intuitive interface for quick data access  
+**Clean UI/UX** - Intuitive interface for quick data access
 
 **In Progress:**
-- [ ] Loading spinner for API requests
-- [ ] Error message handling for failed API calls
+
 - [ ] Theme switcher (Light/Dark/Retro modes)
 
 ## <a name="nextsteps"></a>Future Features
@@ -59,6 +58,7 @@ A real-time financial dashboard that provides investors with live market data, s
 ## <a name="author"></a>About The Authors
 
 **THEE TEAM**
+
 - **[Anwar Zeb](https://github.com/a-zeb)** - Backend Integration & API Development
 - **[Clarence Franklin](https://github.com/cfra8189)** - UI/UX Design & Styling
 - **[Kayla Knight](https://github.com/kaylaknight385)** - Project Lead & Frontend Development
@@ -66,19 +66,21 @@ A real-time financial dashboard that provides investors with live market data, s
 ## Development Process
 
 This project was built collaboratively using:
+
 - Git branching workflow for version control
-- Feature-based development approach
-- Regular code reviews and pair programming
-- Agile methodology with daily standups
+- Combination of Feature-based and trunk-based development approach
+- Code reviews and pair programming
 
 ## Installation & Setup
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/kaylaknight385/APIDashboard.git
    ```
 
 2. Navigate to project directory:
+
    ```bash
    cd APIDashboard
    ```
@@ -87,8 +89,6 @@ This project was built collaboratively using:
 
 4. View in browser at `localhost:5500` (or your port)
 
-
-
 ## Works Cited:
 
 - [Lightweight Charts Documentation](https://tradingview.github.io/lightweight-charts/)
@@ -96,5 +96,3 @@ This project was built collaboratively using:
 - [MDN Web Docs - JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [CSS-Tricks - Grid & Flexbox](https://css-tricks.com/)
 - Theme inspiration from classic financial terminals
-
-

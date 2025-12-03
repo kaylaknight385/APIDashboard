@@ -85,3 +85,15 @@ body {
   left: 0;
   right: 0;
 }
+
+.logo, .nav-link{
+  opacity: 1;
+  transition: opacity .3s ease-in-out;
+}
+
+.nav-link:hover {
+  opacity: 0.5;
+}
+.logo:hover {
+  opacity: 0.5;
+}

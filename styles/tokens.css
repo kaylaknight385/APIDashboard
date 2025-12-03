@@ -1,5 +1,5 @@
-/*more data theme BUT EVERYTHING IS THEMED*/
-:root[data-theme="light"] {
+
+:root {
   /*BAACKGROUNDS*/
   --bg-primary: #e8e8e8;
   --bg-secondary: #c4c4c4;
